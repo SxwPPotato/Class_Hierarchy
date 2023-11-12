@@ -1,4 +1,6 @@
 #pragma once
+#include "Figures.h"
+#include "Triangle.h"
 
 class Right_triangle : public Triangle {
 public:

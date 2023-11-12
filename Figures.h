@@ -7,7 +7,9 @@ protected:
 public:
     void Show_name();
     virtual void Show_figure();
+  
 };
+
 
 
 void print_info(Figures* figure);

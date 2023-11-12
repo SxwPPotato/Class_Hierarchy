@@ -15,38 +15,80 @@
     int main()
     {
         setlocale(LC_ALL, "russian");
-
-        Triangle triangle(15, 25, 30, 60, 40, 80);
-        Quadrangle quadrangle(10, 20, 30, 40, 80, 90, 50, 60);
-        Right_triangle right_triangle(10, 20, 30, 30, 50);
-        Isosceles_triangle isosceles_triangle(20, 30, 50, 60);
-        Equilateral_triangle equilateral_triangle(10);
-        Parallelogram parallelogram(10, 20, 30, 40);
-        Rectangle rectangle(20, 30);
-        Rhomb rhomb(30, 20, 30);
-        Quadrate quadrate(20);
-
-        triangle.Show_name();
-        print_info(&triangle);
-        right_triangle.Show_name();
-        print_info(&right_triangle);
-        isosceles_triangle.Show_name();;
-        print_info(&isosceles_triangle);
-        equilateral_triangle.Show_name();
-        print_info(&equilateral_triangle);
-
-        quadrangle.Show_name();
-        print_info(&quadrangle);
-        rectangle.Show_name();
-        print_info(&rectangle);
-        quadrate.Show_name();
-        print_info(&quadrate);
-        parallelogram.Show_name();
-        print_info(&parallelogram);
-        rhomb.Show_name();
-        print_info(&rhomb);
+        try {
+            Triangle triangle(15, 25, 30, 70, 40, 80);
+            triangle.Show_name();
+            print_info(&triangle);
+        }
+        catch (std::domain_error& e) {
+                std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Quadrangle quadrangle(10, 20, 30, 40, 80, 100, 70, 90);
+            quadrangle.Show_name();
+            print_info(&quadrangle);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Right_triangle right_triangle(10, 20, 30, 40, 50);
+            right_triangle.Show_name();
+            print_info(&right_triangle);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Isosceles_triangle isosceles_triangle(20, 30, 50, 80);
+            isosceles_triangle.Show_name();;
+            print_info(&isosceles_triangle);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Equilateral_triangle equilateral_triangle(10);
+            equilateral_triangle.Show_name();
+            print_info(&equilateral_triangle);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Parallelogram parallelogram(10, 20, 100, 80);
+            parallelogram.Show_name();
+            print_info(&parallelogram);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Rectangle rectangle(20, 30);
+            rectangle.Show_name();
+            print_info(&rectangle);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Rhomb rhomb(30, 100, 80);
+            rhomb.Show_name();
+            print_info(&rhomb);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+        try {
+            Quadrate quadrate(20);
+            quadrate.Show_name();
+            print_info(&quadrate);
+        }
+        catch (std::domain_error& e) {
+            std::cout << e.what() << "\n" << std::endl;
+        }
+  
         std::cout << "\n";
         return 0;
-
     }
 

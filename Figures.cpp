@@ -16,3 +16,4 @@ void Figures::Show_figure() {
 void print_info(Figures* figure) {
     figure->Show_figure();
 }
+
