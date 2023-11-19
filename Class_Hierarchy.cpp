@@ -16,7 +16,7 @@
     {
         setlocale(LC_ALL, "russian");
         try {
-            Triangle triangle(15, 25, 30, 70, 40, 80);
+            Triangle triangle(15, 25, 30, 70, 30, 80);
             triangle.Show_name();
             print_info(&triangle);
         }
